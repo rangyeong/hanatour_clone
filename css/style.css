@@ -1,0 +1,1348 @@
+@charset "uft-8";
+
+/* 탑베너 */
+#wrap{
+    position: relative;
+    min-width: 1240px;
+}
+#topBn{
+    background-color: #fef2f4;
+    /* margin-bottom: 58px; */
+}
+#topBn_in{
+    position: relative;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.topBn_img::after{
+    position: absolute;
+    top: 15px;
+    left: 599px;
+    /* content는 가상 태그의 필수 속성임. */
+    /* 가상태그의 공간만 필요하고 내용은 없어도 되기 때문에 따옴표만 적성해, 공백의 내용이 작성되도록 만들어 사용함. */
+    content: "";
+    /* 가상태그는 인라인 요소 성질을 가짐. 크기를 적용하려면 태그의 성질을 바꿔줘야함. */
+    display: block;
+    width: 1px;
+    height: 60px;
+    background-color: #000;
+    opacity: 0.1;
+}
+.topBn_img ul{
+    display: flex;
+    justify-content: space-between;
+}
+.topBn_close button{
+    position: absolute;
+    top: 28px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    /* 아이콘 크기 +여유값이 들어간 너비&높이 */
+    background-image: url(../img/topbn_close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+}
+
+#header{
+    position: relative;
+    z-index: 300;
+}
+/* 헤더1 */
+#head1{
+    position: relative;
+    display: flex;
+    width: 1200px;
+    height: 113px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo{
+    margin-right: 30px;
+    margin-top: 56px;
+}
+.logo a{
+    display: block;
+    width: 150px;
+    height: 30px;
+    background-image: url(../img/logo.png);
+    text-indent: -9999px;
+
+}
+.h_search{
+    position: relative;
+    margin-top: 49px;
+    margin-right: 40px;
+}
+.h_search .hs_txt{
+    padding-right: 50px;
+    padding-left: 20px;
+    width: 336px;
+    height: 40px;
+    border: 2px solid #222;
+    border-radius: 100px;
+    font-size: 15px;
+    color: #222;
+
+}
+.h_search .hs_txt::placeholder{
+    font-weight: 500;
+    color: #000;
+    opacity: 0.4;
+}
+/* .h_search::placeholder{
+    font-weight: 500;
+} */
+.h_search .hs_btn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/ico-search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+}
+.h_keyword{
+    margin-top: 59px;
+    line-height: 18px;
+}
+.h_keyword a{
+    color: #555;
+}
+.h_keyword a span{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    /* line-height로 폰트 영역을 높이면 글자가 중간에 배치되는데 중간보다 살짝 밑으로 고정됨. 그럴 땐 line-height 값을 조금 줄이고 padding-bottom값을 넣어서 강제로 조금 올리는 식으로 수정해야함. */
+    margin-right: 6px;
+    line-height: 15px;
+    /* width: 34px;
+    height: 18px; */
+    font-weight: 700;
+    font-size: 12px;
+    color: #573f89;
+    border: 1px solid #573f89;
+    border-radius: 4px 0 4px 4px ;
+
+}
+.h_util{
+    position: absolute;
+    top: 11px;
+    right: 0;
+    margin-bottom: 25px;
+}
+.h_util ul{
+    display: flex;
+}
+.h_util li{
+    margin-left: 10px;
+}
+.h_util li a{
+    font-size: 12px;
+    color: #333;
+}
+.h_util li a:hover{
+    color: #573f89;
+}
+.h_icon a{
+    font-size: 12px;
+    color: #000;
+}
+.h_icon{
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+.h_icon ul{
+    display: flex;
+}
+.h_icon li{
+    margin-left: 20px;
+    /* width: 42px;
+    height: 30px; */
+}
+.h_icon li a{
+    display: block;
+    min-width: 24px;
+    padding-top: 24px;
+    font-size: 11px;
+    color: #333;
+    text-align: center;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.h_icon_mymenu a{
+    background-image: url(../img/ico-mymenu.png);
+}
+.h_icon_reservation a{
+    background-image: url(../img/ico-reservationhistory.png);
+}
+.h_icon_like a{
+    background-image: url(../img/ico-haeder-choice.png);
+}
+.h_icon li a:hover{
+    color: #573f89;
+}
+.h_icon_mymenu a:hover{
+    background-image: url(../img/ico-mymenu_.png);
+}
+.h_icon_reservation a:hover{
+    background-image: url(../img/ico-reservationhistory_.png);
+}
+.h_icon_like a:hover{
+    background-image: url(../img/ico-haeder-choice_.png);
+    background-position: center top 1px;
+}
+
+/* 헤더2 */
+#head2{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #222;
+}
+#head2_in{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 55px;
+    /* margin-bottom: 20px; */
+}
+.btn_open_allmenu{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.btn_open_allmenu a{
+    display: block;
+    /* margin-top: 22px; */
+    /* margin-right: 25px; */
+    /* padding-left: 57px; */
+    /* margin-left: 25px; */
+    padding-right: 25px;
+    padding-left: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    /* border-right: 1px solid #999; */
+    background-image: url(../img/ico-hamburgermenu.png);
+    background-repeat: no-repeat;
+    background-position: left 25px center;
+    color: #222;
+}
+.gnb ul{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 138px;
+    /* justify-content: space-between; */
+    /* margin-top: 22px; */
+}
+.gnb ul li{
+    margin-left: 26px;
+}
+.gnb li a{
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+}
+.gnb li a:hover{
+    color: #573f89;
+}
+.h_menu ul{
+    display: flex;
+    /* position: absolute;
+    top: 22px;
+    right: 0; */
+}
+.h_menu ul li{
+    margin-left: 17px;
+}
+.h_menu li a{
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+}
+.h_menu li a:hover{
+    color: #573f89;
+}
+
+/* 헤더 - 퀵 */
+#quick{
+    position:absolute;
+    top: 170px;
+    right: 0;
+    width: 118px;
+    border: 1px solid #555;
+}
+#quick .chat{
+    border-bottom: 1px solid #222;
+}
+#quick .chat a{
+    display: block;
+    height: 39px;
+    padding-top: 70px;
+    text-align: center;
+    color: #333;
+    background-color: #fff;
+    background-image: url(../img/ico-chatting.png);
+    background-repeat: no-repeat;
+    background-position: center top 23px;
+}
+.recent_view{
+    border-bottom: 1px solid #ddd;
+    background-color: #f3f3f3;
+    line-height: 45px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: -0.5px;
+}
+.recent_view::after{
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    width: 7px;
+    height: 7px;
+    border-left: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    margin-top: 17px;
+    margin-left: 5px;
+    transform: rotate(-45deg);
+}
+.go_top a{
+    display: block;
+    height: 29px;
+    padding-top: 9px;
+    text-align: center;
+    font-size: 12px;
+    color: #222;
+    background-color: #f3f3f3;
+}
+.go_top a::before{
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    width: 0px;
+    height: 0px;
+    border-bottom: 6px solid #4c4c4c;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-top: 12px;
+    margin-right: 8px;
+}
+
+
+/* 본문1 - 기본틀*/
+.main1{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+    background-color: #cfeffa;
+}
+.main1_in{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main1_in .reserve{
+    width: 330px;
+}
+.main_slide{
+    position: relative;
+    width: 740px;
+    box-shadow: 7px 13px 20px rgba(0, 0, 0, 0.2);    
+}
+
+/* 메인 예약 폼 */
+.main1_in .reserve{
+    margin-top: 75px;
+
+}
+.reserve h2{
+    margin-bottom: 25px;
+    font-size: 25px;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+.reserve h2 span{
+    font-weight: 400;
+}
+.reserve ul{
+    display: flex;
+    justify-content: space-between;
+}
+.rev_btn{
+    margin-bottom: 24px;
+    border-bottom: 1px solid #222;
+}
+.rev_btn a{
+    display: block;
+    width: 110px;
+    padding-bottom: 10px;
+    text-align: center;
+    /* margin-bottom: 13px; */
+    color: #888;
+}
+.rev_btn .on a{
+    border-bottom: 1px solid #222;
+    font-weight: 700;
+    color: #111;
+}
+.pkg01{
+    margin-bottom: 14px;
+}
+.pkg01 input{
+    width: 296px;
+    height: 52px;
+    border: 0;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.pkg01 input::placeholder{
+    color: #999;
+}
+.pkg02{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+.pkg02 > div{
+    position: relative;
+}
+.pkg02 > div::before{
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 14px;
+    display: block;
+    width: 12px;
+    height: 14px;
+    background-image: url(../img/spr_icn.png);
+}
+.pkg02 .pkg02_1::before{
+    background-position: -136px 0;
+}
+.pkg02 .pkg02_2::before{
+    background-position: -136px -18px;
+}
+.pkg02 input{
+    width: 114px;
+    height: 42px;
+    padding-right: 10px;
+    padding-left: 37px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #222;
+}
+
+.pkg02 input::placeholder{
+    color: #222;
+}
+.pkg03{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.pkg03 label{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.pkg03 label::before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 24px;
+    margin-right: 18px;
+    background-image: url(../img/spr_man.png);
+}
+.pkg03 .pkg03_2::before{
+    background-position: -42px 0;
+}
+.pkg03 input{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.pkg03 span{
+    font-size: 13px;
+    line-height: 18px;
+    opacity: 0.5;
+}
+.pkg04 button{
+    width: 330px;
+    height: 56px;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 메인슬라이더 */
+.ms_btn{
+    display: flex;
+    position: absolute;
+    bottom: 84px;
+    left: 84px;
+    /* bottom: 97px;
+    left: 99px; */
+    /* background-color: lightgreen; */
+}
+
+
+.ms_btn i{
+    display: block;
+    width: 13px;
+    height: 14px;
+    background-image: url(../img/spr_com.png);
+    text-indent: -9999px;
+    /* background-repeat: no-repeat; */
+    /* background-color: lightsalmon; */
+}
+.ms_btn button{
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 0;
+    /* padding-top: 13px; */
+    /* padding-bottom: 13px; */
+    padding-left: 13px;
+    /* padding-right: 17px; */
+}
+.ms_btn .ms_pause{
+    display: none;
+}
+.ms_btn .ms_prev{
+    width: 41px;
+    /* 예외로 왼쪽 테두리 1px을 넣어서 영역이 좁아지지 않게 너비값을 넓혀줌. */
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.ms_btn .ms_prev i{
+    background-position: -405px -183px;
+}
+.ms_btn .ms_next i{
+    background-position: -418px -183px;
+}
+.ms_btn .ms_pause i{
+    background-position: -431px -183px;
+}
+.ms_btn .ms_play i{
+    background-position: -442px -183px;
+}
+.ms_pager{
+    margin-left: 18px;
+    line-height: 40px;
+    color: #fff;
+}
+
+/* 본문2  */
+.main2{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    /* background-color: lightgoldenrodyellow; */
+}
+.m2_list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.m2_list li{
+    width: 282px;
+}
+.main_title{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1em;
+    margin-bottom: 30px;
+}
+.item_photo{
+    height: 210px;
+    margin-bottom: 23px;
+}
+.item_photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item_name{
+    margin-bottom: 11px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #222;
+}
+.item_hash{
+    font-size: 13px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 21px;
+}
+.item_price span{
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+.item_price{
+    color: #222;
+}
+
+/* 본문3 */
+.main3{
+    position: relative;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: lightpink; */
+}
+.m3_left{
+    position: relative;
+}
+.m3_left_text{
+    position: absolute;
+    top: 65px;
+    left: 62px;
+    /* top: 50px;
+    left: 50px; */
+}
+.m3_title{
+    margin-bottom: 37px;
+    font-size: 34px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.4em;
+}
+.m3_btn ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.m3_btn li{
+    display: inline-block;
+    background-color: #fdfeff;
+    margin-bottom: 13px;
+    cursor: pointer;
+    border-radius: 50px;
+    padding-left: 22px;
+    padding-right: 21px;
+    font-weight: 500;
+    line-height: 36px;
+}
+.m3_btn .active{
+    background-color: #222;
+    color: #fff;
+}
+.main3{
+    margin-bottom: 100px;
+}
+.m3_list{
+    position: absolute;
+    top: 78px;
+    right: 0;
+    width: 900px;
+}
+.m3_list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.m3_list ul li{
+    width: 280px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); 
+}
+.m3_list .item_photo{
+    margin-bottom: 0;
+}
+.item_text{
+    height: 203px;
+    /* 텍스트 내용이 늘어났을 때 영역의 크기가 바뀌지 않기 위해 padding-bottom이 아니라 위쪽 패딩값을 제외한 높이값을 설정함. */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    background-color: #fff;
+}
+.m3_list .item_name{
+    margin-bottom: 17px;
+}
+.item_cate{
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    color: #597ba0 ;
+}
+.item_ment{
+    margin-bottom: 18px;
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+}
+.main4{
+    position: relative;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    /* background-color: lightgoldenrodyellow; */
+}
+.m4_list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.m4_list li{
+    width: 282px;
+}
+.m4_list .item_hash{
+    margin-bottom: 8px ;
+    color: #597ba0;
+}
+.m4_list .item_photo{
+    margin-bottom: 40px;
+}
+.m4_list .item_name{
+    margin-bottom: 28px ;
+}
+
+.m4_prev, .m4_next{
+    position: absolute;
+    top: 141px;
+    background-image: url(../img/spr_com.png);
+    text-indent: -9999px;
+}
+.m4_prev{
+    left: -24px;
+    width: 48px;
+    height: 48px;
+    background-position: -129px -175px;
+}
+.m4_next{
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-position: -185px -179px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+.main5{
+    padding-top: 75px;
+    padding-bottom: 120px;
+    margin-bottom: 100px;
+    background-color: #deceb5;
+}
+.m5_in{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* .m5_left a{
+    display: ;
+    width: 588px;
+    height: 536px;
+    background-image: url(../img/s05_00.jpg);
+    text-indent: -9999px;
+
+} */
+.m5_left{
+    width: 590px;
+    cursor: pointer;
+}
+.m5_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 556px;
+}
+/* .m5_right p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} */
+.m5_photo{
+    margin-right: 22px;
+    width: 102px;
+    height: 102px;
+}
+.m5_photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.m5_r_1{
+    display: inline-block;
+    font-weight: 600;
+    line-height: 2em;
+    border-bottom: 3px solid #222;
+}
+.m5_r_2{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 2.5em;
+}
+.m5_r_3{
+    margin-bottom: 18px;
+    font-weight: 500;
+    line-height: 2em;
+    color: #555;
+}
+.m5_r_4{
+    margin-bottom: 93px;
+    line-height: 1.6em;
+    font-weight: 500;
+    color: #555;
+}
+.m5_right li{
+        margin-top: 18px;
+}
+.m5_right li a{
+    display: flex;
+}
+.m5_name{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 2em;
+    color: #222;
+}
+.m5_ment{
+    font-weight: 500;
+    color: #666;
+    line-height: 1em;
+    margin-bottom: 15px;
+}
+.m5_price{
+    color: #222;
+    font-size: 12px;
+    font-weight: 500;
+}
+.m5_price span{
+    font-weight: 700;
+    font-size: 15px;
+    color: #222;
+}
+
+/* 본문6 */
+.main6{
+    margin-bottom: 100px;
+}
+.m6_in{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.m6_item ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.m6_item_photo{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background-image: url(../img/s06_01.jpg);
+}
+.m6_item_photo img{
+    width: 100%;
+    height: 100%;
+    
+}
+.m6_item{
+    text-align: center;
+}
+.m6_active{
+    position: relative;
+}
+.m6_active .m6_item_photo{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url(../img/s06_01.jpg);
+}
+.m6_active .m6_item_photo img{
+    width: 100%;
+    height: 100%;
+}
+.m6_recomand{
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    width: 50px;
+    background-color: #6029bb;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 50px;
+    /* line-hight로 높이 값이 들어갔으니 따로 height값을 안넣어도 됨. */
+    /* 높이값을 50-15 = 35px만큼 주고 패딩값을 줄인 높이값 만큼 15px을 주는 방법도 있음.(글자가 2줄일 경우에는 꼭 이 방법을 써야함.) */
+}
+.m6_item_name{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 3em;
+}
+.m6_item_ment{
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+}
+.m6_active .m6_item_photo{
+    margin-bottom: 21px;
+}
+.m6_active .m6_item_name{
+    font-size: 28px;
+    line-height: 1em;
+    margin-bottom: 17px;
+}
+.m6_active .m6_item_ment{
+    font-size: 14px;
+}
+
+/* 본문7 */
+.main7{
+    padding-top: 65px;
+    padding-bottom: 100px;
+    background-image: url(../img/s07_00.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.m7_in{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.m7_in .main_title{
+    color: #fff;
+}
+.m7box{
+    display: flex;
+}
+.m7box h3{
+    margin-bottom: 36px;
+}
+.m7box > div{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+/* .m7box > div:last-child{
+    padding-right: 0;
+} */
+.m7box1{
+    width: 387px;
+}
+.m7_video{
+    height: 218px;
+    /* 높이값 써야함! 그래도 크기 변경이 안되면 absolute로 설정하면 될 수도 있다는,,,,,🤢 */
+    margin-bottom: 37px;
+}
+.m7_video iframe{
+    width: 100%;
+    height: 100%;
+}
+.m7box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* position: relative; */
+    width: 387px;
+    background-image: url(../img/s07_02.jpg);
+    color: #fff;
+}
+/* .m7box2 .text{
+    position: absolute;
+    bottom: 39px;
+    left: 31px;
+} */
+.m7box2 .text p, .m7box2 .text p > a{
+    color: #fff;
+}
+.m7box3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* position: relative; */
+    width: 246px;
+    /* 
+    background-image: url(../img/s07_03.png);
+    background-position: center 75px;
+    background-repeat: no-repeat; */
+}
+.m7box3 .m7_photo{
+    text-align: center;
+}
+.m7box3 .text{
+    /* position: absolute;
+    bottom: 39px;
+    left: 31px; */
+}
+.m7_item_title{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 2em;
+    
+}
+.m7_item_ment{
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #666;
+}
+.m7_item_link a{
+    font-weight: 500;
+    font-size: 12.5px;
+    color: #222;
+}
+/* 🤗😆
+ctrl+i 누르면 이모지창 뜸 */
+
+#footer{
+
+}
+.gray{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: 80px;
+    background-color: #f7f7f7;
+}
+.f_quick{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 54px;
+}
+.f_quick ul{
+    display: flex;
+    justify-content: space-between;
+}
+.f_quick li{
+    width: 131px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+.f_quick li:last-child{
+}
+.f_quick .quick_icon1 {
+    width: 132px;
+}
+.f_quick .quick_icon2{
+    width: 133px;   
+}
+.f_quick a{
+
+    display: block;
+    /* width: 131px;
+    height: 120px; */
+    /* background-color: #fff; 
+    쌤은 위의 li태그에 색상값을 줬는데 이렇게 a태그에 넣어도 됨.*/
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: #000;
+    border-right: none;
+}
+.f_quick li a::before{
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-image: url(../img/spr_man.png);
+    
+}
+.quick_icon1 a::before{
+    background-position: 1px -69px;
+}
+.quick_icon2 a::before{
+    background-position: -31px -69px;
+}
+.quick_icon3 a::before{
+    background-position: -63px -69px;
+}
+.quick_icon4 a::before{
+    background-position: -95px -69px;
+}
+.quick_icon5 a::before{
+    background-position: -127px -69px;
+}
+.quick_icon6 a::before{
+    background-position: -159px -69px;
+}
+.quick_icon7 a::before{
+    background-position: -191px -69px;
+}
+.quick_icon8 a::before{
+    background-position: -223px -69px;
+}
+.quick_icon9 a::before{
+    background-position: -255px -69px; 
+    /* border-right: 1px solid #f6f6f6; */
+}
+.f_cs{
+    padding-top: 45px;
+    padding-bottom: 47px;
+    padding-left: 51px;
+    padding-right: 52px;
+    width: 1097px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 2px solid #000;
+    background-color: #fff;
+}
+.f_cs ul{
+    display: flex;
+    justify-content: space-between;
+}
+.f_cs1 .f_bold{
+    margin-bottom: 28px;
+}
+.f_bold{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.2em;
+}
+.f_content{
+    font-size: 12px;
+}
+.f_name{
+    margin-top: 25px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.8em;
+}
+.f_text{
+    line-height: 1.6em;
+    color: #666;
+}
+.f_caution{
+    margin-top: 5px;
+    line-height: 1em;
+}
+.f_cs4{
+    margin-top: -19px;
+}
+.f_benefit{
+    display: inline-block;
+    border: 1px solid #888;
+    border-radius: 4px;
+    margin-top: 4px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #666;
+}
+.f_middle{
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+}
+.f_m_in{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.f_middle ul{
+    display: flex;
+}
+.f_m_text li{
+    margin-right: 15px;
+}
+.f_m_text a{
+    color: #222;
+}
+.f_m_icon li{
+    margin-left: 17px;
+    width: 28px;
+    height: 28px;
+    text-indent: -9999px;
+}
+.f_m_icon1{
+    background-image: url(../img/facebook.png);
+}
+.f_m_icon2{
+    background-image: url(../img/instagram.png);
+}
+.f_m_icon3{
+    background-image: url(../img/naverblog.png);
+}
+.f_m_icon4{
+    background-image: url(../img/kakaoplus.png);
+}
+.f_m_icon5{
+    background-image: url(../img/youtube.png);
+}
+.f_m_icon6{
+    background-image: url(../img/kakaostory.png);
+}
+.f_l_in{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 16px;
+    
+    padding-top: 30px;
+}
+.f_l_left p{
+    padding-right: 15px;
+    display: flex;
+    margin-right: 15px;
+    line-height: 14px;
+    font-size: 12px;
+    border-right: 1px solid #000;
+}
+/* .f_l_left p::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 14px;
+    margin-left: 10px;
+    border-right: 1px solid #000;
+
+} */
+.f_l_text1 p:last-child, .f_l_text2 p:last-child{
+    border-right: 0;
+}
+.f_l_text1{
+    display: flex;
+    padding-bottom: 27px;
+}
+.f_l_t2_1, .f_l_t2_2, .f_l_t2_3{
+    display: flex;
+    flex-wrap: wrap;
+           
+}
+.f_l_text2{
+    margin-bottom: 22px;
+}
+.f_l_text2 p{
+    line-height: 1em;
+    margin-bottom: 8px;
+}
+.f_l_text3 p{
+    display: flex;
+    border-right: 0;
+    line-height: 1.4em;
+}
+.f_l_text4 p{
+    border-right: 0;
+    line-height: 3em;
+}
+
+.f_text_bold{
+    font-weight: bold;
+}
+.f_text_underline{
+    /* border-bottom: 1px solid #222; */
+    text-decoration: underline;
+}
+.f_icon_cs{
+    display: flex;
+    align-items: center;
+}
+.f_icon_cs::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+    background-image: url(../img/ico-callcenter.png);
+    background-repeat: no-repeat;
+}
+.f_l_right p{
+    margin-bottom: 10px;
+}
+.f_l_t2_3 span{
+    padding-left: 15px;
+    font-size: 16px;
+}
+.f_end{
+    background-color: #f9fafe;
+}
+.f_e_in{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 22px;
+    background-color: #dac9ff;
+}
+.f_e_in ul{
+    display: flex;
+}
+
+.f_e_in li{
+    display: flex;
+}
+.f_e_in li p{
+    display: flex;
+}
+.f_b1{
+    margin-right: 104px;
+}
+.f_b1::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/award-logo-01.png);
+}
+.f_b2{
+    margin-right: 68px;
+}
+.f_b2::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/award-logo-02.png);
+}
+.f_b3{
+    margin-right: 76px;
+}
+.f_b3::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/award-logo-03.png);
+}
+.brand{
+    margin-left: 223px;
+}
+.f_e_in .arrow p{
+    flex-direction: column;
+}
+.f_a_left, .f_a_right{
+    width: 26px;
+    height: 26px;
+    border: 1px solid #888;
+    text-indent: -9999px;
+}
+.f_a_left{
+    background-image: url(../img/ico-arrow-left.png);
+}
+.f_a_right{
+    background-image: url(../img/ico-arrow-right.png);
+}
+
+

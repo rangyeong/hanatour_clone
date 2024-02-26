@@ -1,0 +1,892 @@
+@charset "uft-8";
+
+#wrap{
+    position: relative;
+    min-width: 1240px;
+}
+
+
+#header{
+    position: relative;
+    z-index: 300;
+}
+/* 헤더1 */
+#head1{
+    position: relative;
+    display: flex;
+    width: 1200px;
+    height: 113px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+}
+.logo{
+    margin-right: 30px;
+    margin-top: 56px;
+}
+.logo a{
+    display: block;
+    width: 150px;
+    height: 30px;
+    background-image: url(../img/logo.png);
+    text-indent: -9999px;
+
+}
+.h_search{
+    position: relative;
+    margin-top: 49px;
+    margin-right: 40px;
+}
+.h_search .hs_txt{
+    padding-right: 50px;
+    padding-left: 20px;
+    width: 336px;
+    height: 40px;
+    border: 2px solid #222;
+    border-radius: 100px;
+    font-size: 15px;
+    color: #222;
+
+}
+.h_search .hs_txt::placeholder{
+    font-weight: 500;
+    color: #000;
+    opacity: 0.4;
+}
+/* .h_search::placeholder{
+    font-weight: 500;
+} */
+.h_search .hs_btn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/ico-search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+}
+.keyword_collection{
+    display: none;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 600px;
+    border: 1px solid #222;
+    background-color: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+.keyword_collection .close{
+    padding: 12px 20px;
+    background-color: #eee;
+    text-align: right;
+}
+.hk_wrap{
+    position: relative;
+    width: 184px;
+    margin-top: 49px;
+}
+.h_keyword{
+    line-height: 18px;
+}
+.h_keyword a{
+    display: block;
+    padding: 10px 0;
+    color: #555;
+}
+.h_keyword a span{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    /* line-height로 폰트 영역을 높이면 글자가 중간에 배치되는데 중간보다 살짝 밑으로 고정됨. 그럴 땐 line-height 값을 조금 줄이고 padding-bottom값을 넣어서 강제로 조금 올리는 식으로 수정해야함. */
+    margin-right: 6px;
+    line-height: 15px;
+    /* width: 34px;
+    height: 18px; */
+    font-weight: 700;
+    font-size: 11px;
+    color: #5e2bb8;
+    border: 1px solid #5e2bb8;
+    border-radius: 4px 0 4px 4px ;
+
+}
+.h_keyword_list{
+    display: none;
+    position: absolute;
+    top: -3px;
+    left: -15px;
+    width: 182px;
+    border: 1px solid #222;
+    background-color: #fff;
+}
+.hk_wrap:hover .h_keyword_list{
+    display: block;
+}
+.h_keyword_list .top{
+    padding-left: 15px;
+    line-height: 44px;
+    background-color: #f3f3f3;
+}
+.h_keyword_list .top span{
+    border: 1px solid #5e2bb8;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    border-radius: 4px 0 4px 4px;
+    line-height: 15px;
+    font-size: 11px;
+    color: #5e2bb8;
+    font-weight: 700;
+
+}
+.h_keyword_list ul{
+    padding: 10px 15px;
+}
+.h_keyword_list li{
+    padding: 3px 0px;
+}
+.h_keyword_list li a{
+    color: #555;
+}
+.h_util{
+    position: absolute;
+    top: 11px;
+    right: 0;
+    margin-bottom: 25px;
+}
+.h_util > ul{
+    display: flex;
+}
+.h_util > ul > li{
+    position: relative;
+    margin-left: 25px;
+}
+.h_util > ul > li a{
+    font-size: 12px;
+    color: #333;
+}
+.h_util li a:hover{
+    color: #573f89;
+}
+.h_icon a{
+    font-size: 12px;
+    color: #000;
+}
+.h_icon{
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+.h_icon > ul{
+    display: flex;
+}
+.h_icon > ul > li{
+    margin-left: 8px;
+    /* width: 42px;
+    height: 30px; */
+}
+.h_icon > ul > li > a{
+    display: block;
+    min-width: 24px;
+    padding-top: 24px;
+    font-size: 11px;
+    color: #333;
+    text-align: center;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.h_icon .h_icon_mymenu > a{
+    background-image: url(../img/ico-mymenu.png);
+}
+.h_icon_reservation > a{
+    background-image: url(../img/ico-reservationhistory.png);
+}
+.h_icon_like > a{
+    background-image: url(../img/ico-haeder-choice.png);
+}
+.h_icon li a:hover{
+    color: #573f89;
+}
+.h_icon_mymenu > a:hover{
+    background-image: url(../img/ico-mymenu_.png);
+}
+.h_icon_reservation > a:hover{
+    background-image: url(../img/ico-reservationhistory_.png);
+}
+.h_icon_like >  a:hover{
+    background-image: url(../img/ico-haeder-choice_.png);
+    background-position: center top 1px;
+}
+.h_icon .mymenu{
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: -68px;
+    width: 184px;
+    padding-top: 12px;
+    /* background-color: lightcoral; */
+}
+.h_icon .h_icon_mymenu:hover .mymenu{
+    display: block;
+}
+.h_icon .mymenu .top{
+    position: relative;
+    border: 1px solid #222;
+    border-bottom: 0;
+    padding: 14px 20px;
+    background-color: #f3f3f3;
+}
+.h_icon .mymenu .top::before{
+    content: "";
+    position: absolute;
+    left: 88px;
+    top: -5px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid #222;
+    border-right: 1px solid #222;
+    background-color: #f3f3f3;
+    transform: rotate(-45deg);
+}
+.h_icon .mymenu .top span{
+    color: #5e2bb8;
+}
+.h_icon .mymenu .btns{
+    border: 1px solid #222;
+    border-top: 0;
+    padding: 14px 20px;
+    background-color: #fff;
+}
+.h_icon .mymenu .btns .login{
+    margin-bottom: 8px;
+}
+.h_icon .mymenu .btns p a{
+    display: block;
+    border: 1px solid#ddd;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 13px;
+}
+.h_icon .mymenu .btns .join a{
+    border-color: #5e2bb8;
+    color: #5e2bb8;
+}
+
+/* 헤더2 */
+#head2{
+    position: relative;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #222;
+}
+#head2_in{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 55px;
+}
+.gnb{
+    display: flex;
+}
+.btn_open_allmenu{
+    position: relative;
+    width: 143px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.btn_open_allmenu.active::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 143px;
+    height: 56px;
+    border: 1px solid #140f16;
+    border-bottom-color: #fff;
+}
+.btn_open_allmenu a{
+    display: block;
+    padding-right: 25px;
+    padding-left: 57px;
+    font-size: 16px;
+    font-weight: 500;
+    background-image: url(../img/ico-hamburgermenu.png);
+    background-repeat: no-repeat;
+    background-position: left 25px center;
+    color: #222;
+}
+.allmenu{
+    display: none;
+    position: absolute;
+    top: 57px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+.allmenu_in{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+.allmenu_in dl{
+    width: 155px;
+    margin-right: 45px;
+    margin-bottom: 20px;
+}
+.allmenu_in dt{
+    border-bottom: 2px solid #222;
+}
+.allmenu_in .allmenu_in_wrap5, .allmenu_in .allmenu_in_wrap9{
+    width: 355px;
+    margin-right: 0;
+}
+.allmenu_in .allmenu_in_wrap6{
+    margin-left: 200px;
+}
+.allmenu_in dt a{
+    display: block;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+}
+.allmenu_in dd{
+    padding-top: 15px;
+}
+.allmenu_in .allmenu_in_wrap5 dd, .allmenu_in .allmenu_in_wrap9 dd{
+    display: flex;
+}
+.allmenu_in .allmenu_in_wrap5 dd ul, .allmenu_in .allmenu_in_wrap9 dd ul{
+    width: 177px;
+}
+.allmenu_in li a{
+    display: block;
+    line-height: 26px;
+    color: #666;
+}
+.allmenu_close{
+    position: absolute;
+    top: 15px;
+    right: 50%;
+    margin-right: -600px;
+}
+.allmenu_close a{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/ico-alllmenu_close.png);
+    text-indent: -9999px;
+}
+.head2menu > ul{
+    display: flex;
+    margin-left: 13px;
+}
+.head2menu > ul > li{
+    padding: 0 13px;
+}
+.head2menu > ul > li a{
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+}
+.head2menu > ul > li:hover > a{
+    height: 54px;
+    border-bottom: 2px solid #5e2bb8;
+    color: #573f89;
+}
+.head2menu .depth2{
+    display: none;
+    position: absolute;
+    top: 57px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+.head2menu .hasD2:hover .depth2{
+    display: block;
+}
+.head2menu .d2_in{
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 130px;
+}
+.head2menu .d2_in > ul{
+    display: flex;
+}
+.head2menu .d2_in > ul > li{
+    padding: 0 13px;
+}
+.head2menu .d2_in > ul > li > a{
+    display: block;
+    line-height: 48px;
+    color: #555;
+}
+.head2menu .d2_in > ul > li:hover > a{
+    height: 47px;
+    border-bottom: 2px solid #5e2bb8;
+    color: #5e2bb8;
+}
+.head2menu .depth3{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+.head2menu .d2_in > ul > li:hover .depth3{
+    display: block;
+}
+.head2menu .d3_in{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top  :20px;
+}
+.head2menu .d3_in > ul{
+    width: 25%;
+    border-right: 1px solid #ccc;
+    padding-left: 25px;
+    box-sizing: border-box;
+}
+.head2menu .d3_in > ul:last-child{
+    border-right: 0;
+}
+.head2menu .d3_in > ul > li{
+    margin-bottom: 25px;
+}
+.head2menu .d3_in > ul > li > a{
+    display: block;
+    line-height: 26px;
+    color: #222;
+    font-size: 15px;
+    font-weight: 500;
+}
+.head2menu .depth4 li a{
+    display: block;
+    line-height: 24px;
+    color: #555;
+}
+.h_menu ul{
+    display: flex;
+}
+.h_menu ul li{
+    margin-left: 26px;
+}
+.h_menu li a{
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+}
+.h_menu li a:hover{
+    color: #573f89;
+}
+
+/* 헤더 - 퀵 */
+#quick{
+    position:absolute;
+    top: 170px;
+    right: 0;
+    width: 118px;
+    border: 1px solid #555;
+}
+#quick .chat{
+    border-bottom: 1px solid #222;
+}
+#quick .chat a{
+    display: block;
+    height: 39px;
+    padding-top: 70px;
+    text-align: center;
+    color: #333;
+    background-color: #fff;
+    background-image: url(../img/ico-chatting.png);
+    background-repeat: no-repeat;
+    background-position: center top 23px;
+}
+.recent_view{
+    border-bottom: 1px solid #ddd;
+    background-color: #f3f3f3;
+    line-height: 45px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: -0.5px;
+}
+.recent_view::after{
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    width: 7px;
+    height: 7px;
+    border-left: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    margin-top: 17px;
+    margin-left: 5px;
+    transform: rotate(-45deg);
+}
+.go_top a{
+    display: block;
+    height: 29px;
+    padding-top: 9px;
+    text-align: center;
+    font-size: 12px;
+    color: #222;
+    background-color: #f3f3f3;
+}
+.go_top a::before{
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    width: 0px;
+    height: 0px;
+    border-bottom: 6px solid #4c4c4c;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-top: 12px;
+    margin-right: 8px;
+}
+/* 푸터 */
+
+.gray{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: 80px;
+    background-color: #f7f7f7;
+}
+.f_quick{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 54px;
+}
+.f_quick ul{
+    display: flex;
+    justify-content: space-between;
+}
+.f_quick li{
+    width: 131px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+.f_quick .quick_icon1 {
+    width: 132px;
+}
+.f_quick .quick_icon2{
+    width: 133px;   
+}
+.f_quick a{
+
+    display: block;
+    /* width: 131px;
+    height: 120px; */
+    /* background-color: #fff; 
+    쌤은 위의 li태그에 색상값을 줬는데 이렇게 a태그에 넣어도 됨.*/
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: #000;
+    border-right: none;
+}
+.f_quick li a::before{
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-image: url(../img/spr_man.png);
+    
+}
+.quick_icon1 a::before{
+    background-position: 1px -69px;
+}
+.quick_icon2 a::before{
+    background-position: -31px -69px;
+}
+.quick_icon3 a::before{
+    background-position: -63px -69px;
+}
+.quick_icon4 a::before{
+    background-position: -95px -69px;
+}
+.quick_icon5 a::before{
+    background-position: -127px -69px;
+}
+.quick_icon6 a::before{
+    background-position: -159px -69px;
+}
+.quick_icon7 a::before{
+    background-position: -191px -69px;
+}
+.quick_icon8 a::before{
+    background-position: -223px -69px;
+}
+.quick_icon9 a::before{
+    background-position: -255px -69px; 
+    /* border-right: 1px solid #f6f6f6; */
+}
+.f_cs{
+    padding-top: 45px;
+    padding-bottom: 47px;
+    padding-left: 51px;
+    padding-right: 52px;
+    width: 1097px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 2px solid #000;
+    background-color: #fff;
+}
+.f_cs ul{
+    display: flex;
+    justify-content: space-between;
+}
+.f_cs1 .f_bold{
+    margin-bottom: 28px;
+}
+.f_bold{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.2em;
+}
+.f_content{
+    font-size: 12px;
+}
+.f_name{
+    margin-top: 25px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.8em;
+}
+.f_text{
+    line-height: 1.6em;
+    color: #666;
+}
+.f_caution{
+    margin-top: 5px;
+    line-height: 1em;
+}
+.f_cs4{
+    margin-top: -19px;
+}
+.f_benefit{
+    display: inline-block;
+    border: 1px solid #888;
+    border-radius: 4px;
+    margin-top: 4px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #666;
+}
+.f_middle{
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+}
+.f_m_in{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.f_middle ul{
+    display: flex;
+}
+.f_m_text li{
+    margin-right: 15px;
+}
+.f_m_text a{
+    color: #222;
+}
+.f_m_icon li{
+    margin-left: 17px;
+    width: 28px;
+    height: 28px;
+    text-indent: -9999px;
+}
+.f_m_icon1{
+    background-image: url(../img/facebook.png);
+}
+.f_m_icon2{
+    background-image: url(../img/instagram.png);
+}
+.f_m_icon3{
+    background-image: url(../img/naverblog.png);
+}
+.f_m_icon4{
+    background-image: url(../img/kakaoplus.png);
+}
+.f_m_icon5{
+    background-image: url(../img/youtube.png);
+}
+.f_m_icon6{
+    background-image: url(../img/kakaostory.png);
+}
+.f_l_in{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 16px;
+    
+    padding-top: 30px;
+}
+.f_l_left p{
+    padding-right: 15px;
+    display: flex;
+    margin-right: 15px;
+    line-height: 14px;
+    font-size: 12px;
+    border-right: 1px solid #000;
+}
+/* .f_l_left p::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 14px;
+    margin-left: 10px;
+    border-right: 1px solid #000;
+
+} */
+.f_l_text1 p:last-child, .f_l_text2 p:last-child{
+    border-right: 0;
+}
+.f_l_text1{
+    display: flex;
+    padding-bottom: 27px;
+}
+.f_l_t2_1, .f_l_t2_2, .f_l_t2_3{
+    display: flex;
+    flex-wrap: wrap;
+           
+}
+.f_l_text2{
+    margin-bottom: 22px;
+}
+.f_l_text2 p{
+    line-height: 1em;
+    margin-bottom: 8px;
+}
+.f_l_text3 p{
+    display: flex;
+    border-right: 0;
+    line-height: 1.4em;
+}
+.f_l_text4 p{
+    border-right: 0;
+    line-height: 3em;
+}
+
+.f_text_bold{
+    font-weight: bold;
+}
+.f_text_underline{
+    /* border-bottom: 1px solid #222; */
+    text-decoration: underline;
+}
+.f_icon_cs{
+    display: flex;
+    align-items: center;
+}
+.f_icon_cs::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+    background-image: url(../img/ico-callcenter.png);
+    background-repeat: no-repeat;
+}
+.f_l_right p{
+    margin-bottom: 10px;
+}
+.f_l_t2_3 span{
+    padding-left: 15px;
+    font-size: 16px;
+}
+.f_end{
+    background-color: #f9fafe;
+}
+.f_e_in{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 22px;
+    background-color: #dac9ff;
+}
+.f_e_in ul{
+    display: flex;
+}
+
+.f_e_in li{
+    display: flex;
+}
+.f_e_in li p{
+    display: flex;
+}
+.f_b1{
+    margin-right: 104px;
+}
+.f_b1::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/award-logo-01.png);
+}
+.f_b2{
+    margin-right: 68px;
+}
+.f_b2::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/award-logo-02.png);
+}
+.f_b3{
+    margin-right: 76px;
+}
+.f_b3::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/award-logo-03.png);
+}
+.brand{
+    margin-left: 223px;
+}
+.f_e_in .arrow p{
+    flex-direction: column;
+}
+.f_a_left, .f_a_right{
+    width: 26px;
+    height: 26px;
+    border: 1px solid #888;
+    text-indent: -9999px;
+}
+.f_a_left{
+    background-image: url(../img/ico-arrow-left.png);
+}
+.f_a_right{
+    background-image: url(../img/ico-arrow-right.png);
+}
+
+
